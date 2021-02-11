@@ -5,4 +5,5 @@ def index(request):
     return render(request, 'pages/index.html')
 
 def about(request):
+    logger.info("about page")
     return render(request, 'pages/about.html')
