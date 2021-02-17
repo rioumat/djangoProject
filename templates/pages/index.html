@@ -2,6 +2,8 @@
 
 {% load humanize %}
 
+{% block title %} | Welcome {% endblock %}
+
 {% block content %}
 
     <!-- Showcase -->
@@ -65,6 +67,10 @@
         </div>
         </div>
     </section>
+<br>
+
+    <!-- if we want to add a message on this page in case of a redirect it will display here-->
+    {% include 'partials/_alerts.html' %}
 
     <!-- Listings -->
     <section id="listings" class="py-5">
@@ -74,7 +80,7 @@
             <!-- add the dynamic listing -->
                 {% if listings %}
                     {% for listing in listings %}
-                    <!-- Listing 1 -->
+                    <!-- Listing -->
                         <div class="col-md-6 col-lg-4 mb-4">
                             <div class="card listing-preview">
                                 <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
